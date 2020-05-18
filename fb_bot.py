@@ -21,7 +21,7 @@ driver = webdriver.Chrome( options= option,executable_path= path)
 
 
 def login():
-    email_user, password_user = "ip_sapkota@hotmail.com", "andress"
+    email_user, password_user = "ip_sapkota@hotmail.com", "Nishant&Mancity487"
     login_page = driver.get("https://www.facebook.com/")
     email = driver.find_element_by_id("email")
     password = driver.find_element_by_id("pass")
@@ -33,7 +33,7 @@ def login():
 
 
 def search_name():
-    person = " "
+    person = "Ps Singh"
     input_text = driver.find_element_by_name("q")
     input_text.send_keys(person)
     input_text.send_keys(Keys.RETURN)
@@ -44,9 +44,10 @@ def search_name():
 
 def hit_like():
     page = driver.find_element_by_tag_name('html')
-    for i in range(7):
+    for i in range(6):
         page.send_keys(Keys.END)
         sleep(6)
+    page.send_keys(Keys.HOME)
     sleep(3)
     likes = driver.find_elements_by_link_text("Like")
     for like in likes:
