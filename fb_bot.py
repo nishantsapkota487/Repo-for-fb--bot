@@ -21,7 +21,7 @@ driver = webdriver.Chrome( options= option,executable_path= path)
 
 
 def login():
-    email_user, password_user = "ip_sapkota@hotmail.com", "Nishant&Mancity487"
+    email_user, password_user = "ip_sapkota@hotmail.com", ""
     login_page = driver.get("https://www.facebook.com/")
     email = driver.find_element_by_id("email")
     password = driver.find_element_by_id("pass")
